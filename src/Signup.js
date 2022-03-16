@@ -45,16 +45,24 @@ class Signup extends React.Component {
           </div>
           <div className="field">
             <div className="ui checkbox">
-              <input type="checkbox" tabindex="0" class="hidden" />
-              <label>I agree to the Terms and Conditions</label>
+              <input type="checkbox" tabindex="0" />
+              <label>
+                I would like to recieve your newsletter and other promotional
+                information{" "}
+              </label>
             </div>
           </div>
           <div className="container">
-            <div className="vertical centered">
-              <button className="ui large green button" type="submit">
+            <div style={{ Align: "right" }} className="vertical centered">
+              <button className="ui primary button" type="submit">
                 Signup
               </button>
             </div>
+          </div>
+          <div>
+            <h5 className="text-color">
+              Already have account? <a href="/">Login</a>
+            </h5>
           </div>
         </form>
       </div>

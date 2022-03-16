@@ -7,3 +7,9 @@
   background-image: url("../src/images/carly-rae-hobbins-zNHOIzjJiyA-unsplash.jpg");
   background-size: cover;
 }
+.bars-icon {
+  align-items: flex-end;
+}
+.text-color {
+  color: white;
+}

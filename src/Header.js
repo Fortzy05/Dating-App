@@ -1,9 +1,10 @@
 import React from "react";
+import "./App.css";
 const Header = () => {
   return (
-    <div className="ui menu">
+    <div className="ui menu ">
       <div className="item">
-        <i class="bars icon"></i>
+        <i className="bars icon bars-icon"></i>
       </div>
     </div>
   );
