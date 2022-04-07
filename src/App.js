@@ -1,16 +1,18 @@
 import React from "react";
-import Header from "./Header";
-import Signup from "./Signup";
-import "./App.css";
-import Login from "./Login";
+import { Route, Routes } from "react-router-dom";
+import Home from "./components/Home";
+import CreateAccount from "./components/CreateAccount";
+import Header from "./components/Header";
 
 const App = () => {
   return (
-    <section className="main-container">
+    <>
       <Header />
-      <Signup />
-      <Login />
-    </section>
+      <Routes>
+        <Route path="/" element={<Home />}></Route>
+        <Route path="CreateAccount" element={<CreateAccount />}></Route>
+      </Routes>
+    </>
   );
 };
 export default App;
