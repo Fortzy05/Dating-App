@@ -9,6 +9,8 @@ class CreateAccount extends React.Component {
       Email: "",
       Phone: "",
       Password: "",
+      passwordConfirmation: "",
+      toggle: "",
     };
   }
 
@@ -22,7 +24,26 @@ class CreateAccount extends React.Component {
       Gender: event.target.value,
     });
   };
-  handleEmailChange = () => {};
+  handleEmailChange = (event) => {
+    this.setState({
+      Email: event.target.value,
+    });
+  };
+  handlePasswordChange = (event) => {
+    this.setState({
+      Password: event.target.value,
+    });
+  };
+  handlePasswordConfirmationChange = (event) => {
+    this.setState({
+      passwordConfirmation: event.target.value,
+    });
+  };
+  handleToggle = (event) => {
+    this.setState({
+      toggle: event.target.value,
+    });
+  };
 
   render() {
     return (
@@ -90,6 +111,8 @@ class CreateAccount extends React.Component {
             <div className=" required field">
               <label>Confirm Password</label>
               <input
+                value={this.state.passwordConfirmation}
+                onChange={this.handlePasswordConfirmationChange}
                 type="password"
                 name="confirm password"
                 placeholder="Confirm Password"
@@ -97,7 +120,12 @@ class CreateAccount extends React.Component {
             </div>
             <div className="required field">
               <div className="ui toggle checkbox">
-                <input type="checkbox" tabIndex="0" />
+                <input
+                  value={this.state.toggle}
+                  onClick={this.handleToggle}
+                  type="checkbox"
+                  tabIndex="0"
+                />
                 <label style={{ color: "white" }}>
                   I would like to recieve your newsletter and other promotional
                   information
