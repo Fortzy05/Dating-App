@@ -6,9 +6,7 @@ const Header = () => {
     <div className="ui attached stackable menu">
       <div className="ui container">
         <Link to="/">
-          <a href="/" className="item">
-            <i className="home icon"></i> Home
-          </a>
+          <i className="home icon"></i> Home
         </Link>
 
         <a href="/Login" className="item">

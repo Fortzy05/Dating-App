@@ -7,13 +7,18 @@ class CreateAccount extends React.Component {
       Name: "",
       Gender: "",
       Email: "",
-      Phone: "",
+      PhoneNumber: "",
       Password: "",
       passwordConfirmation: "",
       toggle: "",
     };
   }
-
+  onFormSubmit = (event) => {
+    alert(
+      `${this.state.Name} ${this.state.Email} ${this.state.Gender} ${this.state.Password} ${this.state.PhoneNumber} ${this.state.passwordConfirmation} ${this.state.toggle}`
+    );
+    event.preventDefault();
+  };
   handleNameChange = (event) => {
     this.setState({
       Name: event.target.value,
@@ -44,6 +49,11 @@ class CreateAccount extends React.Component {
       toggle: event.target.value,
     });
   };
+  handlePhoneNumberChange = (event) => {
+    this.setState({
+      PhoneNumber: event.target.value,
+    });
+  };
 
   render() {
     return (
@@ -55,7 +65,7 @@ class CreateAccount extends React.Component {
           <div style={{ textAlign: "center" }}>
             <h3>Sign up to meet the one.</h3>
           </div>
-          <form onSubmit={this.onFormSubmit} className="ui mini form">
+          <form onSubmit={this.onFormSubmit} className="ui form">
             <div className=" required field">
               <label>Full Name</label>
               <input
@@ -91,9 +101,9 @@ class CreateAccount extends React.Component {
             <div className="required field">
               <label>Phone Number</label>
               <input
-                value={this.state.Phone}
-                onChange={this.handlePhoneChange}
-                type="text"
+                value={this.state.PhoneNumber}
+                onChange={this.handlePhoneNumberChange}
+                type="number"
                 name="phone number"
                 placeholder="Phone Number"
               />
