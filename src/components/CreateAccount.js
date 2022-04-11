@@ -18,6 +18,7 @@ class CreateAccount extends React.Component {
       `${this.state.Name} ${this.state.Email} ${this.state.Gender} ${this.state.Password} ${this.state.PhoneNumber} ${this.state.passwordConfirmation} ${this.state.toggle}`
     );
     event.preventDefault();
+    console.log(this.state);
   };
   handleNameChange = (event) => {
     this.setState({
